@@ -1,29 +1,52 @@
-import {AppBar, Toolbar, styled, Box } from '@mui/material';
+import { useContext } from 'react';
+import { AppBar, Toolbar, styled, Box } from '@mui/material';
 
+import { AccountContext } from '../context/AccountProvider';
 
-//Components
-import LoginDialog from "./Account/LoginDialog";
-const Header = styled(AppBar)`
-    height : 20vh;
-    background-color : #00818A;
-    box-shadow: 0 0.1vh 10px rgb(44 79 81 /0.5);
-`
+//components
+import ChatDialog from './chat/ChatDialog';
+import LoginDialog from './account/LoginDialog';
+
 const Component = styled(Box)`
-height : 100vh;
-background : #283149;
-`
+    height: 100vh;
+    background: #DCDCDC;
+`;
+
+const Header = styled(AppBar)`
+    background-color: #00A884;
+    height: 125px;
+    box-shadow: none;
+`;
+    
+const LoginHeader = styled(AppBar)`
+    background: #00bfa5;
+    height: 200px;
+    box-shadow: none;
+`;
+
 const Messenger = () => {
-    return(
+    const { account } = useContext(AccountContext);
+    
+    return (
         <Component>
-            <Header>
-            <Toolbar>
-
-            </Toolbar>
-            </Header>
-            <LoginDialog />
+            {
+                account ? 
+                <>
+                    <Header>
+                        <Toolbar></Toolbar>
+                    </Header>
+                    <ChatDialog />
+                </>
+                :
+                <>
+                    <LoginHeader>
+                        <Toolbar></Toolbar>
+                    </LoginHeader>
+                    <LoginDialog />
+                </>
+            }
         </Component>
-        
-    );
-
+    )
 }
+
 export default Messenger;
