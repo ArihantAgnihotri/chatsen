@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.title {
+  color: #00818A;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 20px;
+  cursor: pointer;
+  margin : auto;
+  padding : 2%;
+}
+
+h1 span {
+  transition: 0.8s ease-out;
+}
+.title:hover .title-chat{
+  letter-spacing: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #DBEDF3;
+}
+.title:hover .title-sen {
+  letter-spacing: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #DBEDF3;
+}
+.title:hover span {
+  color: #00929c;
+  text-shadow: 0 0 10px #018089, 0 0 20px #00a4af, 0 0 40px #00a1ac;
+}

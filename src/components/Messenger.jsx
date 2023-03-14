@@ -4,13 +4,13 @@ import {AppBar, Toolbar, styled, Box } from '@mui/material';
 //Components
 import LoginDialog from "./Account/LoginDialog";
 const Header = styled(AppBar)`
-    height : 25vh;
-    background-color : #A6E3E9;
+    height : 20vh;
+    background-color : #00818A;
     box-shadow: 0 0.1vh 10px rgb(44 79 81 /0.5);
 `
 const Component = styled(Box)`
 height : 100vh;
-background : #E3FDFD;
+background : #283149;
 `
 const Messenger = () => {
     return(

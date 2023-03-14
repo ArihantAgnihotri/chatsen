@@ -9,26 +9,7 @@ import jwt_decode from "jwt-decode";
 
 const Component = styled(Box)`
     display: flex; 
-`;
-
-const Container = styled(Box)`
-    padding: 56px 0 56px 56px;
-`;
-
-const QRCOde = styled('img')({
-    margin: '50px 0 0 50px',
-    height: 264,
-    width: 264
-});
-
-const Title = styled(Typography)`
-    font-size: 300%;
-    padding : 2%;
-    margin : auto;
-    color: #373A40;
-    font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
-    font-weight: 600;
-    letter-spacing : 10px;
+    
 `;
 
 
@@ -39,19 +20,11 @@ const dialogStyle = {
     maxWidth: '100',
     maxHeight: '100%',
     borderRadius: 0,
-    boxShadow: 'none',
-    overflow: 'hidden'
+    boxShadow: '0 0.1vh 10px #018089',
+    overflow: 'hidden',
+    backgroundColor : '#283149'
 }
 
-const StyledList = styled(List)`
-    &  > li {
-        padding: 0;
-        margin-top: 15px;
-        font-size: 18px;
-        line-height: 28px;
-        color: #4a4a4a;
-    }
-`;
 
 const LoginDialog = () => {
 
@@ -77,38 +50,19 @@ const LoginDialog = () => {
     // };
 
     return (
-        // <Dialog
-        //     open={true}
-        //     BackdropProps={{style: {backgroundColor: 'unset'}}}
-        //     maxWidth={'md'}
-        //     PaperProps={{ sx: dialogStyle }}
-        // >
-        //     <Component>
-        //             
-                    
-                
-        //         <Box>
-        //             <Box style={{position: 'absolute', top: '50%', transform: 'translateX(25%) translateY(-25%)'}}>
-        //                     <GoogleLogin
-        //                         onSuccess={onLoginSuccess}
-        //                         onError={onLoginFailure}
-        //                     />
-        //             </Box>
-        //         </Box>
-        //     </Component>
-        // </Dialog>
-
-
 
         <Dialog
         open={true}
         BackdropProps={{style: {backgroundColor: 'unset'}}}
+
         maxWidth={'md'}
         PaperProps={{ sx: dialogStyle }}
     >
         <Component>
             {/* <Container> */}
-            <Title>CHATSEN</Title>
+            <h1 className='title'>
+      <span className='title-chat'>CHAT</span><span className='title-sen'>SEN</span>
+    </h1>
             {/* </Container> */}
             
             <Box style={{ position: 'absolute', top : '40%', left : '38%'}}>
